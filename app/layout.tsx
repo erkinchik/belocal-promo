@@ -1,15 +1,37 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Manrope, Instrument_Serif, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const manrope = Manrope({
+  subsets: ['latin', 'cyrillic'],
+  weight: ['300', '400', '500', '600', '700', '800'],
+  variable: '--font-manrope',
+  display: 'swap',
+})
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ['latin'],
+  weight: '400',
+  style: ['normal', 'italic'],
+  variable: '--font-instrument-serif',
+  display: 'swap',
+})
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  variable: '--font-jetbrains-mono',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
-  title: 'BeLocal - Coming Soon',
-  description: 'BeLocal is coming soon. Stay tuned for an exciting new way to explore local experiences.',
+  title: 'belocal — твой локальный гид на основе ИИ',
+  description:
+    'belocal — карманный AI-гид, который собирает маршрут под твой вкус, бюджет и настроение. Бесплатно для путешественников — навсегда.',
   openGraph: {
-    title: 'BeLocal - Coming Soon',
-    description: 'BeLocal is coming soon. Stay tuned for an exciting new way to explore local experiences.',
+    title: 'belocal — be local anywhere in the world',
+    description:
+      'AI-гид для путешественников. Брони через Booking, GetYourGuide и Tripadvisor.',
     type: 'website',
   },
 }
@@ -20,9 +42,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="ru" className={`${manrope.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable}`}>
+      <body className="font-sans">{children}</body>
     </html>
   )
 }
-
