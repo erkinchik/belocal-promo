@@ -5,7 +5,7 @@ import { Wrap } from './ui/Section'
 
 export function Wordmark() {
   return (
-    <section className="pb-20 pt-10 text-center">
+    <section className="pb-12 pt-6 text-center sm:pb-20 sm:pt-10">
       <Wrap>
         <motion.p
           initial={{ opacity: 0, y: 20 }}

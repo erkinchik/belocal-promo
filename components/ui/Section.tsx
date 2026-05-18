@@ -11,7 +11,7 @@ export function Section({
   children: ReactNode
 }) {
   return (
-    <section id={id} className={clsx('py-[88px] md:py-[120px]', className)}>
+    <section id={id} className={clsx('py-14 sm:py-20 md:py-[120px]', className)}>
       <div className="mx-auto max-w-[1240px] px-5 md:px-7">{children}</div>
     </section>
   )

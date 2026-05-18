@@ -8,14 +8,14 @@ import { Button } from './ui/Button'
 export function CTA() {
   const { t } = useI18n()
   return (
-    <section id="download" className="pb-[60px] pt-16">
+    <section id="download" className="pb-12 pt-10 sm:pb-[60px] sm:pt-16">
       <Wrap>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6 }}
-          className="relative grid items-center gap-10 overflow-hidden rounded-[32px] bg-ink px-8 py-14 text-white md:grid-cols-[1.4fr_1fr] md:px-14 md:py-20"
+          className="relative grid items-center gap-8 overflow-hidden rounded-[24px] bg-ink px-6 py-10 text-white sm:gap-10 sm:rounded-[32px] sm:px-8 sm:py-14 md:grid-cols-[1.4fr_1fr] md:px-14 md:py-20"
         >
           {/* gradient orbs */}
           <div className="pointer-events-none absolute -bottom-[200px] -right-[200px] h-[520px] w-[520px] rounded-full opacity-45"
@@ -26,14 +26,14 @@ export function CTA() {
           />
 
           <div className="relative z-10">
-            <h3 className="mb-4 text-[clamp(36px,4.4vw,58px)] font-bold leading-[1.05] tracking-[-0.03em]">
+            <h3 className="mb-3 text-[clamp(28px,6vw,58px)] font-bold leading-[1.08] tracking-[-0.03em] sm:mb-4 sm:leading-[1.05]">
               {t('Будь среди').replace(' первых.', '')}{' '}
               <span className="font-italic-serif text-brand-300">{t('первых.')}</span>
             </h3>
-            <p className="mb-7 max-w-[48ch] text-[17px] text-white/65">
+            <p className="mb-6 max-w-[48ch] text-[14.5px] text-white/65 sm:mb-7 sm:text-[17px]">
               {t('Оставь заявку на ранний доступ — и получи belocal бесплатно до публичного запуска.')}
             </p>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-2.5 sm:gap-3">
               <Button as="a" href="#" variant="light" size="lg" withArrow>
                 {t('App Store')}
               </Button>
@@ -49,7 +49,7 @@ export function CTA() {
               whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.15 }}
-              className="w-[220px] rounded-3xl bg-white p-[18px] text-center text-ink shadow-[0_30px_50px_-10px_rgba(0,0,0,0.4)]"
+              className="w-[180px] rounded-2xl bg-white p-4 text-center text-ink shadow-[0_30px_50px_-10px_rgba(0,0,0,0.4)] sm:w-[220px] sm:rounded-3xl sm:p-[18px]"
             >
               <div className="qr-grid relative mb-2.5 aspect-square rounded-[10px] border border-line">
                 {/* QR corners */}

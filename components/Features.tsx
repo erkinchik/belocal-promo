@@ -20,7 +20,7 @@ function CardShell({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.5, ease: 'easeOut', delay }}
-      className={`relative flex min-h-[300px] flex-col justify-between overflow-hidden rounded-3xl border border-line bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-line-strong ${className ?? ''}`}
+      className={`relative flex min-h-[240px] flex-col justify-between overflow-hidden rounded-2xl border border-line bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-line-strong sm:min-h-[260px] sm:rounded-3xl sm:p-6 md:min-h-[300px] md:p-7 ${className ?? ''}`}
     >
       {children}
     </motion.div>
@@ -43,30 +43,30 @@ export function Features() {
   const { t } = useI18n()
   return (
     <Section id="features">
-      <div className="mb-14 grid items-end gap-10 md:grid-cols-[1fr_auto]">
+      <div className="mb-10 grid items-end gap-6 sm:gap-10 md:mb-14 md:grid-cols-[1fr_auto]">
         <div>
           <Kicker>{t('Возможности')}</Kicker>
-          <h2 className="mb-3.5 mt-3.5 text-[clamp(36px,4.4vw,60px)] font-bold leading-[1.05] tracking-[-0.03em]">
+          <h2 className="mb-3 mt-3 text-[clamp(28px,6vw,60px)] font-bold leading-[1.08] tracking-[-0.03em] sm:mb-3.5 sm:mt-3.5 sm:leading-[1.05]">
             {t('Один помощник на').replace(' всё путешествие.', '')} <span className="font-italic-serif text-brand">{t('всё путешествие.')}</span>
           </h2>
-          <p className="max-w-[640px] text-[18px] text-ink-2">
+          <p className="max-w-[640px] text-[15.5px] text-ink-2 sm:text-[18px]">
             {t('От Лиссабона до Бали — один помощник на каждое направление. Брони отелей и экскурсий — через Booking, GetYourGuide и Tripadvisor.')}
           </p>
         </div>
-        <Button as="a" href="#showcase" variant="dark" withArrow>
+        <Button as="a" href="#showcase" variant="dark" withArrow className="self-start md:self-end">
           {t('Все функции')}
         </Button>
       </div>
 
-      <div className="grid grid-cols-1 gap-[18px] md:grid-cols-2 lg:grid-cols-6 lg:auto-rows-[minmax(180px,auto)]">
+      <div className="grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-2 md:gap-[18px] lg:grid-cols-6 lg:auto-rows-[minmax(180px,auto)]">
         {/* C1 - AI Chat */}
         <CardShell className="!bg-ink !text-white lg:col-span-3" delay={0}>
           <CardTag light>{t('01 · Чат с ИИ')}</CardTag>
           <div>
-            <h3 className="mb-2 text-[24px] font-semibold leading-tight tracking-[-0.02em] text-white">
+            <h3 className="mb-2 text-[19px] font-semibold leading-tight tracking-[-0.02em] sm:text-[24px] text-white">
               {t('Говори как с другом')}
             </h3>
-            <p className="max-w-[36ch] text-[15px] text-white/65">
+            <p className="max-w-[36ch] text-[13.5px] sm:text-[15px] text-white/65">
               {t('Опиши настроение, бюджет и время — получишь маршрут, бронь и причины, почему именно это.')}
             </p>
           </div>
@@ -91,10 +91,10 @@ export function Features() {
         <CardShell className="lg:col-span-3" delay={0.05}>
           <CardTag>{t('02 · Карта')}</CardTag>
           <div>
-            <h3 className="mb-2 text-[24px] font-semibold leading-tight tracking-[-0.02em]">
+            <h3 className="mb-2 text-[19px] font-semibold leading-tight tracking-[-0.02em] sm:text-[24px]">
               {t('Места, где ходят местные')}
             </h3>
-            <p className="max-w-[36ch] text-[15px] text-ink-3">
+            <p className="max-w-[36ch] text-[13.5px] sm:text-[15px] text-ink-3">
               {t('Без туристических ловушек. Только проверенные кафе, виды и тропы — с актуальными часами.')}
             </p>
           </div>
@@ -123,10 +123,10 @@ export function Features() {
         <CardShell className="lg:col-span-2" delay={0.1}>
           <CardTag>{t('03 · Маршрут')}</CardTag>
           <div>
-            <h3 className="mb-2 text-[24px] font-semibold leading-tight tracking-[-0.02em]">
+            <h3 className="mb-2 text-[19px] font-semibold leading-tight tracking-[-0.02em] sm:text-[24px]">
               {t('Готовый план дня')}
             </h3>
-            <p className="max-w-[36ch] text-[15px] text-ink-3">
+            <p className="max-w-[36ch] text-[13.5px] sm:text-[15px] text-ink-3">
               {t('За 30 секунд — расписание с переходами и резервами времени.')}
             </p>
           </div>
@@ -158,7 +158,7 @@ export function Features() {
         <CardShell className="!bg-brand !text-white lg:col-span-2" delay={0.15}>
           <CardTag light>{t('04 · Партнёры')}</CardTag>
           <div>
-            <h3 className="mb-2 text-[24px] font-semibold leading-tight tracking-[-0.02em] text-white">
+            <h3 className="mb-2 text-[19px] font-semibold leading-tight tracking-[-0.02em] sm:text-[24px] text-white">
               {t('Брони через тех, кому доверяют миллионы')}
             </h3>
           </div>
@@ -184,10 +184,10 @@ export function Features() {
         <CardShell className="lg:col-span-2" delay={0.2}>
           <CardTag>{t('05 · Сообщество')}</CardTag>
           <div>
-            <h3 className="mb-2 text-[24px] font-semibold leading-tight tracking-[-0.02em]">
+            <h3 className="mb-2 text-[19px] font-semibold leading-tight tracking-[-0.02em] sm:text-[24px]">
               {t('Подсказки от местных')}
             </h3>
-            <p className="max-w-[36ch] text-[15px] text-ink-3">{t('Реальные жители — не блогеры.')}</p>
+            <p className="max-w-[36ch] text-[13.5px] sm:text-[15px] text-ink-3">{t('Реальные жители — не блогеры.')}</p>
           </div>
           <div className="mt-6 flex items-center">
             {[

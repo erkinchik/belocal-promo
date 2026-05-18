@@ -9,14 +9,14 @@ export function Nav() {
   const { t, lang, setLang } = useI18n()
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-paper/80 backdrop-blur-md backdrop-saturate-150">
-      <div className="mx-auto flex h-[68px] max-w-[1240px] items-center justify-between px-5 md:px-7">
+      <div className="mx-auto flex h-14 max-w-[1240px] items-center justify-between px-4 sm:h-[68px] sm:px-5 md:px-7">
         <a href="#" className="flex items-center gap-2.5">
           <Image
             src="/belocal-logo.png"
             alt="belocal"
             width={130}
             height={26}
-            className="h-[26px] w-auto"
+            className="h-[22px] w-auto sm:h-[26px]"
             priority
           />
         </a>
@@ -43,7 +43,7 @@ export function Nav() {
           <div
             role="tablist"
             aria-label="Language"
-            className="inline-flex h-9 items-center rounded-full border border-line bg-white p-[3px]"
+            className="inline-flex h-8 items-center rounded-full border border-line bg-white p-[3px] sm:h-9"
           >
             {(['ru', 'en'] as const).map((l) => (
               <button
@@ -51,7 +51,7 @@ export function Nav() {
                 onClick={() => setLang(l)}
                 aria-selected={lang === l}
                 className={clsx(
-                  'h-7 rounded-full px-3 text-[12.5px] font-semibold uppercase tracking-wider transition',
+                  'h-6 rounded-full px-2.5 text-[11.5px] font-semibold uppercase tracking-wider transition sm:h-7 sm:px-3 sm:text-[12.5px]',
                   lang === l ? 'bg-ink text-white' : 'text-ink-3 hover:text-ink',
                 )}
               >

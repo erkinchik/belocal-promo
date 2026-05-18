@@ -37,9 +37,9 @@ const COLS = [
 export function Footer() {
   const { t } = useI18n()
   return (
-    <footer className="mt-6 border-t border-line py-16 pb-10">
+    <footer className="mt-6 border-t border-line py-10 pb-8 sm:py-16 sm:pb-10">
       <Wrap>
-        <div className="mb-12 grid grid-cols-2 gap-8 md:grid-cols-[1.4fr_repeat(3,1fr)] md:gap-12">
+        <div className="mb-8 grid grid-cols-2 gap-6 sm:mb-12 sm:gap-8 md:grid-cols-[1.4fr_repeat(3,1fr)] md:gap-12">
           <div>
             <a href="#" className="mb-4 inline-block">
               <Image src="/belocal-logo.png" alt="belocal" width={130} height={26} className="h-[26px] w-auto" />

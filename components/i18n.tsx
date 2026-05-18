@@ -39,6 +39,7 @@ const DICT: Record<string, string> = {
   // trust
   'Интегрировано с': 'Integrated with',
   // features
+  'Один помощник на': 'One companion for',
   'Один помощник на всё путешествие.': 'One companion for the whole trip.',
   'всё путешествие.': 'the whole trip.',
   'От Лиссабона до Бали — один помощник на каждое направление. Брони отелей и экскурсий — через Booking, GetYourGuide и Tripadvisor.':
@@ -77,6 +78,7 @@ const DICT: Record<string, string> = {
   'Подсказки от местных': 'Tips from real locals',
   'Реальные жители — не блогеры.': 'Real residents — not bloggers.',
   // showcase
+  'Три экрана —': 'Three screens —',
   'Три экрана — один маршрут.': 'Three screens — one journey.',
   'один маршрут.': 'one journey.',
   'Чат, карта и план. Они общаются друг с другом: спросил в чате — отметилось на карте — попало в маршрут.':
@@ -110,6 +112,7 @@ const DICT: Record<string, string> = {
   'Sherep · ужин': 'Sherep · dinner',
   '19:00 · бронь': '19:00 · booking',
   // how
+  'Три шага —': 'Three steps —',
   'Три шага — и ты в дороге.': "Three steps — and you're on the road.",
   'и ты в дороге.': "and you're on the road.",
   'Никаких длинных форм. Скажи, чего хочешь — belocal сделает остальное.':
@@ -128,6 +131,7 @@ const DICT: Record<string, string> = {
   'в один тап': 'in one tap',
   // partners
   'Партнёрам · креаторам': 'Partners · creators',
+  'Бесплатно для всех,': 'Free for everyone',
   'Бесплатно для всех, кто едет.': 'Free for everyone who travels.',
   'кто едет.': 'who travels.',
   'Зарабатывают те, кто помогает находить настоящее — места и локальные эксперты.':
@@ -167,6 +171,7 @@ const DICT: Record<string, string> = {
   'Спасибо ✓': 'Thanks ✓',
   'you@email.com': 'you@email.com',
   // FAQ
+  'Коротко о': 'In short, the',
   'Коротко о главном.': 'In short, the essentials.',
   'главном.': 'essentials.',
   'Не нашёл свой? Напиши в': "Didn't find yours? Reach us at",
@@ -186,6 +191,7 @@ const DICT: Record<string, string> = {
   'Русский, английский, турецкий, грузинский, испанский. Чат понимает запрос на одном языке и ответит на нём же.':
     'Russian, English, Turkish, Georgian, Spanish. The chat understands a query in one language and replies in the same.',
   // CTA
+  'Будь среди': 'Be among',
   'Будь среди первых.': 'Be among the first.',
   'первых.': 'the first.',
   'Оставь заявку на ранний доступ — и получи belocal бесплатно до публичного запуска.':

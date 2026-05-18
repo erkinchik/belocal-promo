@@ -23,11 +23,11 @@ function PhoneFrame({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.6, ease: 'easeOut', delay }}
-      className="relative overflow-hidden rounded-[32px] border border-line bg-gradient-to-b from-brand-50 to-[#F4F1E8] px-7 pt-9"
+      className="relative overflow-hidden rounded-[26px] border border-line bg-gradient-to-b from-brand-50 to-[#F4F1E8] px-5 pt-7 sm:rounded-[32px] sm:px-7 sm:pt-9"
     >
-      <div className="mb-1.5 text-[12.5px] font-bold uppercase tracking-[0.14em] text-brand">{label}</div>
-      <div className="mb-3.5 text-[22px] font-semibold leading-tight tracking-[-0.02em]">{title}</div>
-      <div className="mb-6 min-h-[48px] text-[14.5px] text-ink-3">{text}</div>
+      <div className="mb-1.5 text-[11.5px] font-bold uppercase tracking-[0.14em] text-brand sm:text-[12.5px]">{label}</div>
+      <div className="mb-3 text-[18px] font-semibold leading-tight tracking-[-0.02em] sm:mb-3.5 sm:text-[22px]">{title}</div>
+      <div className="mb-5 min-h-[40px] text-[13.5px] text-ink-3 sm:mb-6 sm:min-h-[48px] sm:text-[14.5px]">{text}</div>
       <div className="-mb-10 mx-auto aspect-[9/17] w-[78%] rounded-t-[32px] rounded-b-[18px] bg-[#0E0E0E] p-[7px] pb-0 shadow-[0_28px_50px_-12px_rgba(2,37,88,0.28)]">
         <div className="relative h-full w-full overflow-hidden rounded-t-[26px] rounded-b-[8px] bg-white">
           {children}
@@ -40,21 +40,21 @@ function PhoneFrame({
 export function Showcase() {
   const { t } = useI18n()
   return (
-    <section id="showcase" className="border-y border-line bg-white py-[88px] md:py-[120px]">
+    <section id="showcase" className="border-y border-line bg-white py-14 sm:py-20 md:py-[120px]">
       <Wrap>
-        <div className="mb-14 grid items-end gap-10 md:grid-cols-[1fr_auto]">
+        <div className="mb-10 grid items-end gap-6 sm:gap-10 md:mb-14 md:grid-cols-[1fr_auto]">
           <div>
             <Kicker>{t('Приложение')}</Kicker>
-            <h2 className="mb-3.5 mt-3.5 text-[clamp(36px,4.4vw,60px)] font-bold leading-[1.05] tracking-[-0.03em]">
+            <h2 className="mb-3 mt-3 text-[clamp(28px,6vw,60px)] font-bold leading-[1.08] tracking-[-0.03em] sm:mb-3.5 sm:mt-3.5 sm:leading-[1.05]">
               {t('Три экрана —')} <span className="font-italic-serif text-brand">{t('один маршрут.')}</span>
             </h2>
-            <p className="max-w-[640px] text-[18px] text-ink-2">
+            <p className="max-w-[640px] text-[15.5px] text-ink-2 sm:text-[18px]">
               {t('Чат, карта и план. Они общаются друг с другом: спросил в чате — отметилось на карте — попало в маршрут.')}
             </p>
           </div>
         </div>
 
-        <div className="mx-auto mt-8 grid max-w-[380px] grid-cols-1 gap-6 md:max-w-none md:grid-cols-3">
+        <div className="mx-auto mt-6 grid max-w-[380px] grid-cols-1 gap-5 sm:gap-6 md:mt-8 md:max-w-none md:grid-cols-3">
           {/* Frame 1 - Chat */}
           <PhoneFrame label="01 · Chat" title={t('AI-собеседник')} text={t('Спрашивай как друга — без меню, фильтров и форм.')} delay={0}>
             <div className="flex flex-col gap-2 px-3 py-3.5">

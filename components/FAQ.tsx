@@ -35,16 +35,16 @@ export function FAQ() {
   const [open, setOpen] = useState<number | null>(0)
 
   return (
-    <section id="faq" className="pb-[88px] pt-16 md:pb-[120px]">
+    <section id="faq" className="pb-14 pt-10 sm:pb-20 sm:pt-16 md:pb-[120px]">
       <Wrap>
-        <div className="grid items-start gap-14 lg:grid-cols-[1fr_1.2fr]">
+        <div className="grid items-start gap-8 lg:grid-cols-[1fr_1.2fr] lg:gap-14">
           <div>
             <Kicker>{t('Вопросы')}</Kicker>
-            <h2 className="mb-3.5 mt-3.5 text-[clamp(36px,4.4vw,60px)] font-bold leading-[1.05] tracking-[-0.03em]">
+            <h2 className="mb-3 mt-3 text-[clamp(28px,6vw,60px)] font-bold leading-[1.08] tracking-[-0.03em] sm:mb-3.5 sm:mt-3.5 sm:leading-[1.05]">
               {t('Коротко о').replace(' главном.', '')}{' '}
               <span className="font-italic-serif text-brand">{t('главном.')}</span>
             </h2>
-            <p className="max-w-[640px] text-[18px] text-ink-2">
+            <p className="max-w-[640px] text-[15.5px] text-ink-2 sm:text-[18px]">
               {t('Не нашёл свой? Напиши в')}{' '}
               <a href="#" className="text-brand underline">
                 @belocal_help
@@ -59,10 +59,10 @@ export function FAQ() {
               return (
                 <div
                   key={i}
-                  className={clsx('cursor-pointer border-t border-line py-5', i === FAQS.length - 1 && 'border-b')}
+                  className={clsx('cursor-pointer border-t border-line py-4 sm:py-5', i === FAQS.length - 1 && 'border-b')}
                   onClick={() => setOpen(isOpen ? null : i)}
                 >
-                  <div className="flex items-center justify-between gap-4 text-[18px] font-semibold tracking-tight text-ink">
+                  <div className="flex items-center justify-between gap-3 text-[15.5px] font-semibold tracking-tight text-ink sm:gap-4 sm:text-[18px]">
                     {t(f.q)}
                     <span
                       className={clsx(
@@ -82,7 +82,7 @@ export function FAQ() {
                         transition={{ duration: 0.25, ease: 'easeOut' }}
                         className="overflow-hidden"
                       >
-                        <div className="mt-3.5 max-w-[60ch] text-[15.5px] leading-relaxed text-ink-3">
+                        <div className="mt-3 max-w-[60ch] text-[14px] leading-relaxed text-ink-3 sm:mt-3.5 sm:text-[15.5px]">
                           {t(f.a)}
                         </div>
                       </motion.div>
