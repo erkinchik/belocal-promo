@@ -20,10 +20,10 @@ export function PhoneMock() {
         initial={{ opacity: 0, scale: 0.96 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
-        className="absolute left-1/2 top-1/2 aspect-[9/19] h-[92%] rounded-[32px] bg-[#0E0E0E] p-1.5 shadow-[0_30px_80px_-10px_rgba(2,37,88,0.35),0_8px_22px_rgba(0,0,0,0.18)] sm:h-[88%] sm:rounded-[38px] sm:p-2"
+        className="absolute left-1/2 top-1/2 aspect-[9/19] h-[92%] overflow-hidden rounded-[32px] bg-[#0E0E0E] shadow-[0_30px_80px_-10px_rgba(2,37,88,0.35),0_8px_22px_rgba(0,0,0,0.18)] sm:h-[88%] sm:rounded-[38px]"
         style={{ x: '-50%', y: '-50%' }}
       >
-        <div className="relative flex h-full w-full flex-col overflow-hidden rounded-[26px] bg-white sm:rounded-[34px]">
+        <div className="absolute inset-1.5 flex flex-col overflow-hidden rounded-[26px] bg-white sm:inset-2 sm:rounded-[34px]">
           <div className="absolute left-1/2 top-1 z-10 h-[18px] w-[60px] -translate-x-1/2 rounded-[12px] bg-[#0E0E0E] sm:top-1.5 sm:h-[22px] sm:w-[80px] sm:rounded-[14px]" />
           <div className="flex items-center justify-between px-3 pb-1 pt-2 text-[9px] font-semibold text-ink sm:px-[18px] sm:pb-1.5 sm:pt-3 sm:text-[11px]">
             <span>9:41</span>

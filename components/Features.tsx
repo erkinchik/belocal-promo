@@ -30,7 +30,7 @@ function CardShell({
 function CardTag({ children, light }: { children: React.ReactNode; light?: boolean }) {
   return (
     <span
-      className={`absolute right-6 top-6 text-[11px] font-semibold uppercase tracking-[0.14em] ${
+      className={`absolute right-5 top-5 text-[10.5px] font-semibold uppercase tracking-[0.14em] sm:right-6 sm:top-6 sm:text-[11px] ${
         light ? 'text-white/50' : 'text-ink-3'
       }`}
     >
@@ -63,7 +63,7 @@ export function Features() {
         <CardShell className="!bg-ink !text-white lg:col-span-3" delay={0}>
           <CardTag light>{t('01 · Чат с ИИ')}</CardTag>
           <div>
-            <h3 className="mb-2 text-[19px] font-semibold leading-tight tracking-[-0.02em] sm:text-[24px] text-white">
+            <h3 className="mb-2 max-w-[78%] text-[19px] font-semibold leading-tight tracking-[-0.02em] text-white sm:text-[24px]">
               {t('Говори как с другом')}
             </h3>
             <p className="max-w-[36ch] text-[13.5px] sm:text-[15px] text-white/65">
@@ -91,7 +91,7 @@ export function Features() {
         <CardShell className="lg:col-span-3" delay={0.05}>
           <CardTag>{t('02 · Карта')}</CardTag>
           <div>
-            <h3 className="mb-2 text-[19px] font-semibold leading-tight tracking-[-0.02em] sm:text-[24px]">
+            <h3 className="mb-2 max-w-[78%] text-[19px] font-semibold leading-tight tracking-[-0.02em] sm:text-[24px]">
               {t('Места, где ходят местные')}
             </h3>
             <p className="max-w-[36ch] text-[13.5px] sm:text-[15px] text-ink-3">
@@ -123,7 +123,7 @@ export function Features() {
         <CardShell className="lg:col-span-2" delay={0.1}>
           <CardTag>{t('03 · Маршрут')}</CardTag>
           <div>
-            <h3 className="mb-2 text-[19px] font-semibold leading-tight tracking-[-0.02em] sm:text-[24px]">
+            <h3 className="mb-2 max-w-[78%] text-[19px] font-semibold leading-tight tracking-[-0.02em] sm:text-[24px]">
               {t('Готовый план дня')}
             </h3>
             <p className="max-w-[36ch] text-[13.5px] sm:text-[15px] text-ink-3">
@@ -158,7 +158,7 @@ export function Features() {
         <CardShell className="!bg-brand !text-white lg:col-span-2" delay={0.15}>
           <CardTag light>{t('04 · Партнёры')}</CardTag>
           <div>
-            <h3 className="mb-2 text-[19px] font-semibold leading-tight tracking-[-0.02em] sm:text-[24px] text-white">
+            <h3 className="mb-2 max-w-[78%] text-[19px] font-semibold leading-tight tracking-[-0.02em] text-white sm:text-[24px]">
               {t('Брони через тех, кому доверяют миллионы')}
             </h3>
           </div>
@@ -184,7 +184,7 @@ export function Features() {
         <CardShell className="lg:col-span-2" delay={0.2}>
           <CardTag>{t('05 · Сообщество')}</CardTag>
           <div>
-            <h3 className="mb-2 text-[19px] font-semibold leading-tight tracking-[-0.02em] sm:text-[24px]">
+            <h3 className="mb-2 max-w-[78%] text-[19px] font-semibold leading-tight tracking-[-0.02em] sm:text-[24px]">
               {t('Подсказки от местных')}
             </h3>
             <p className="max-w-[36ch] text-[13.5px] sm:text-[15px] text-ink-3">{t('Реальные жители — не блогеры.')}</p>

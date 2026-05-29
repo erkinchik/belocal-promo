@@ -34,3 +34,11 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# playwright / mcp artifacts
+/.playwright-mcp/
+/.mcp.json
+/desktop-*.png
+/mobile-*.png
+/phone-*.png
+/verify-*.png
+

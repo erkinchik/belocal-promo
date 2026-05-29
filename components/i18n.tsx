@@ -232,6 +232,9 @@ const DICT: Record<string, string> = {
   Дубай: 'Dubai',
   Бангкок: 'Bangkok',
   Рим: 'Rome',
+  // meta
+  'belocal — твой локальный гид на основе ИИ':
+    'belocal — your AI-powered local guide',
 }
 
 type I18nValue = { lang: Lang; t: (s: string) => string; setLang: (l: Lang) => void }
@@ -241,6 +244,8 @@ const I18nCtx = createContext<I18nValue>({
   setLang: () => {},
 })
 
+const BASE_TITLE = 'belocal — твой локальный гид на основе ИИ'
+
 export function I18nProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>('ru')
 
@@ -248,16 +253,19 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     try {
       const saved = (localStorage.getItem('belocal_lang') as Lang | null) ?? 'ru'
       setLangState(saved)
-      document.documentElement.lang = saved
     } catch {}
   }, [])
+
+  useEffect(() => {
+    document.documentElement.lang = lang
+    document.title = lang === 'en' ? DICT[BASE_TITLE] ?? BASE_TITLE : BASE_TITLE
+  }, [lang])
 
   const setLang = (l: Lang) => {
     setLangState(l)
     try {
       localStorage.setItem('belocal_lang', l)
     } catch {}
-    document.documentElement.lang = l
   }
 
   const t = (s: string) => (lang === 'en' ? DICT[s] ?? s : s)

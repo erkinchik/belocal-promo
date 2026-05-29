@@ -131,14 +131,18 @@ export function Partners() {
             <h3 className="mb-2 text-[20px] font-semibold tracking-[-0.02em] sm:text-[24px]">{t('Оставь заявку')}</h3>
             <p className="text-[13.5px] text-ink-3 sm:text-[14.5px]">{t('Свяжемся в течение 48 часов. Без спама — это обещание.')}</p>
           </div>
-          <form onSubmit={onSubmit} className="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap">
+          <form onSubmit={onSubmit} aria-label={t('Оставь заявку')} className="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap">
             <input
               type="email"
               required
               placeholder="you@email.com"
+              aria-label="Email"
               className="h-12 w-full rounded-full border border-line bg-paper px-4 text-[14.5px] text-ink outline-none transition-colors focus:border-brand sm:h-[52px] sm:min-w-[220px] sm:flex-1 sm:px-5 sm:text-[15px]"
             />
-            <select className="h-12 w-full rounded-full border border-line bg-paper px-4 text-[14.5px] text-ink-2 outline-none focus:border-brand sm:h-[52px] sm:w-auto sm:px-5 sm:text-[15px]">
+            <select
+              aria-label={t('Я — место')}
+              className="h-12 w-full rounded-full border border-line bg-paper px-4 text-[14.5px] text-ink-2 outline-none focus:border-brand sm:h-[52px] sm:w-auto sm:px-5 sm:text-[15px]"
+            >
               <option>{t('Я — место')}</option>
               <option>{t('Я — креатор')}</option>
               <option>{t('Другое')}</option>

@@ -56,13 +56,21 @@ export function FAQ() {
           <div className="flex flex-col">
             {FAQS.map((f, i) => {
               const isOpen = open === i
+              const panelId = `faq-panel-${i}`
+              const buttonId = `faq-trigger-${i}`
               return (
                 <div
                   key={i}
-                  className={clsx('cursor-pointer border-t border-line py-4 sm:py-5', i === FAQS.length - 1 && 'border-b')}
-                  onClick={() => setOpen(isOpen ? null : i)}
+                  className={clsx('border-t border-line', i === FAQS.length - 1 && 'border-b')}
                 >
-                  <div className="flex items-center justify-between gap-3 text-[15.5px] font-semibold tracking-tight text-ink sm:gap-4 sm:text-[18px]">
+                  <button
+                    type="button"
+                    id={buttonId}
+                    aria-expanded={isOpen}
+                    aria-controls={panelId}
+                    onClick={() => setOpen(isOpen ? null : i)}
+                    className="flex w-full items-center justify-between gap-3 py-4 text-left text-[15.5px] font-semibold tracking-tight text-ink outline-none transition-colors focus-visible:text-brand sm:gap-4 sm:py-5 sm:text-[18px]"
+                  >
                     {t(f.q)}
                     <span
                       className={clsx(
@@ -72,17 +80,20 @@ export function FAQ() {
                     >
                       <Plus className="h-4 w-4" />
                     </span>
-                  </div>
+                  </button>
                   <AnimatePresence initial={false}>
                     {isOpen && (
                       <motion.div
+                        id={panelId}
+                        role="region"
+                        aria-labelledby={buttonId}
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: 'auto', opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.25, ease: 'easeOut' }}
                         className="overflow-hidden"
                       >
-                        <div className="mt-3 max-w-[60ch] text-[14px] leading-relaxed text-ink-3 sm:mt-3.5 sm:text-[15.5px]">
+                        <div className="max-w-[60ch] pb-4 text-[14px] leading-relaxed text-ink-3 sm:pb-5 sm:text-[15.5px]">
                           {t(f.a)}
                         </div>
                       </motion.div>
